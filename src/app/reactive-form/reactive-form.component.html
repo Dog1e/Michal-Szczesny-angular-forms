@@ -36,4 +36,7 @@
     value="firma"
     formControlName="odbiorca"
   />
+  <br />
+  <button type="submit" [disabled]="!data.valid">Wyślij</button>
+  <button type="button" (click)="data.reset()">Wyczyść</button>
 </form>
