@@ -1,0 +1,54 @@
+<form #data="ngForm" (ngSubmit)="onSubmit()">
+  <h3>Dane podstawowe</h3>
+  <br />
+  <label>Imię<input type="text" [(ngModel)]="user.imie" name="imie" /></label>
+  <br />
+  <label
+    >Nazwisko<input type="text" [(ngModel)]="user.nazwisko" name="nazwisko"
+  /></label>
+  <br />
+  <label
+    >Email<input type="text" [(ngModel)]="user.email" name="email"
+  /></label>
+  <br />
+  <h3>---</h3>
+  Telefon stacjonarny
+  <label
+    >kierunkowy:<input
+      type="text"
+      [(ngModel)]="user.kierunkowy"
+      name="kierunkowy"
+  /></label>
+  <label
+    ><input type="text" [(ngModel)]="user.telefon_s" name="telefon_s"
+  /></label>
+  <label>wewn.<input type="text" [(ngModel)]="user.wewn" name="wewn" /></label>
+  <br />
+  <label
+    >Telefon komórkowy<input
+      type="text"
+      [(ngModel)]="user.telefon_k"
+      name="telefon_k"
+  /></label>
+  <br />
+  <h3>Dane do wystawienia faktury</h3>
+  Odbiorca
+  <label
+    >Osoba prywatna<input
+      type="radio"
+      [(ngModel)]="user.odbiorca"
+      name="odbiorca"
+      value="osoba_prywatna"
+  /></label>
+  <label
+    >Firma<input
+      type="radio"
+      [(ngModel)]="user.odbiorca"
+      name="odbiorca"
+      value="firma"
+  /></label>
+  <br />
+  <br />
+  <input type="submit" value="Wyślij" />
+  <input type="button" value="Wyczysc" (click)="data.reset()" />
+</form>
